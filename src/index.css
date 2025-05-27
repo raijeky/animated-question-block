@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -98,4 +99,47 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Animazioni onda personalizzate */
+@keyframes wave-1 {
+  0% {
+    transform: translateX(-100%) skewX(-15deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-15deg);
+  }
+}
+
+@keyframes wave-2 {
+  0% {
+    transform: translateX(-100%) skewX(-15deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-15deg);
+  }
+}
+
+@keyframes wave-3 {
+  0% {
+    transform: translateX(-100%) skewX(-15deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-15deg);
+  }
+}
+
+.animate-wave-1 {
+  animation: wave-1 8s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.animate-wave-2 {
+  animation: wave-2 10s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.animate-wave-3 {
+  animation: wave-3 12s ease-in-out infinite;
+  animation-delay: 4s;
 }
