@@ -10,6 +10,14 @@ const QuestionBlock = () => {
     "l'esperienza utente"
   ];
 
+  const questionStarters = [
+    "Come possiamo migliorare",
+    "Quali sono i vantaggi di",
+    "Perché è fondamentale",
+    "Come garantire",
+    "Come ottimizzare"
+  ];
+
   const ctaButtons = [
     { text: "Scopri il Design", href: "#design" },
     { text: "Migliora le Performance", href: "#performance" },
@@ -26,6 +34,7 @@ const QuestionBlock = () => {
   });
 
   const currentCTA = ctaButtons[currentWordIndex];
+  const currentStarter = questionStarters[currentWordIndex];
 
   return (
     <div className="w-full max-w-4xl mx-auto p-8">
@@ -33,7 +42,7 @@ const QuestionBlock = () => {
         <div className="text-center space-y-6">
           {/* Titolo con parte variabile */}
           <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
-            Domanda 1: "
+            {currentStarter} "
             <span className="text-green-100 relative">
               {currentText}
               <span className="animate-pulse">|</span>
@@ -44,7 +53,14 @@ const QuestionBlock = () => {
           {/* Risposta */}
           <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 mx-auto max-w-md">
             <p className="text-lg text-green-50 font-medium">
-              Risposta corretta
+              Ogni azienda ha le sue esigenze, le nostre soluzioni si adattano alle tue.
+            </p>
+          </div>
+
+          {/* Testo aggiuntivo prima della CTA */}
+          <div className="pt-2">
+            <p className="text-sm text-green-100">
+              Qual è la soluzione più indicata per te? Scopriamolo insieme!
             </p>
           </div>
 
