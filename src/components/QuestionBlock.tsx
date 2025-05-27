@@ -38,7 +38,7 @@ const QuestionBlock = () => {
 
   return (
     <div className="w-full max-w-4xl mx-auto p-8">
-      <div className="relative bg-gradient-to-br from-green-400 to-green-500 rounded-2xl p-12 shadow-2xl overflow-hidden">
+      <div className="relative bg-gradient-to-br from-green-400 to-green-500 rounded-2xl p-12 shadow-2xl overflow-hidden min-h-[400px] flex flex-col justify-center">
         {/* Animazione onda di sfondo */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent animate-wave-1"></div>
@@ -49,14 +49,16 @@ const QuestionBlock = () => {
         {/* Contenuto principale */}
         <div className="relative z-10 text-left space-y-8">
           {/* Titolo principale con parte variabile */}
-          <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
-            {currentStarter} "
-            <span className="text-green-100 relative">
-              {currentText}
-              <span className="animate-pulse">|</span>
-            </span>
-            "?
-          </h1>
+          <div className="min-h-[120px] flex items-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+              {currentStarter} "
+              <span className="text-green-100 relative">
+                {currentText}
+                <span className="animate-pulse">|</span>
+              </span>
+              "?
+            </h1>
+          </div>
 
           {/* Risposta */}
           <div className="space-y-4">
@@ -80,7 +82,7 @@ const QuestionBlock = () => {
           <div className="pt-6">
             <a
               href={currentCTA.href}
-              className="inline-flex items-center px-8 py-4 bg-white text-green-600 font-bold text-lg rounded-lg shadow-lg hover:bg-green-50 hover:scale-105 transform transition-all duration-300 hover:shadow-xl group border-2 border-white"
+              className="inline-flex items-center px-8 py-4 bg-black text-white font-bold text-lg rounded-lg shadow-lg hover:bg-gray-800 hover:scale-105 transform transition-all duration-300 hover:shadow-xl group border-2 border-black"
             >
               {currentCTA.text}
               <svg 
